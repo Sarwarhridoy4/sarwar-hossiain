@@ -15,6 +15,7 @@ import {
 
 const DockNavbar = () => {
   const { theme, setTheme } = useTheme();
+  console.log(theme);
   const [mounted, setMounted] = useState(false);
 
   // Ensuring the component is mounted to avoid hydration issues
@@ -49,7 +50,12 @@ const DockNavbar = () => {
       </DockIcon>
 
       {/* Dark/Light Mode Toggle Icon */}
-      <DockIcon onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+      <DockIcon
+        onClick={() => {
+          setTheme(theme === "light" ? "dark" : "light");
+          console.count("clicked");
+        }}
+      >
         {theme === "light" ? <FaMoon size={24} /> : <FaSun size={24} />}
       </DockIcon>
     </Dock>

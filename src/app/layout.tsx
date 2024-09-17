@@ -32,13 +32,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-slate-950`}
       >
-        <Navbar />
-        <main>
-          <ThemeProvider attribute='class'>{children}</ThemeProvider>
-        </main>
-        <Footer />
+        <ThemeProvider attribute='class'>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

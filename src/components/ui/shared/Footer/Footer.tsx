@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className='bg-slate-50 dark:bg-slate-950 text-white py-10 px-4'>
+    <footer className='bg-slate-50 dark:bg-slate-950 text-slate-950 dark:text-white py-10 px-4'>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
         {/* Footer Columns */}
         <div className='footer-item'>
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Designed and Developed By Section */}
-      <div className='text-center mt-8 text-gray-400 dark:text-gray-600'>
+      <div className='text-center mt-8 text-slate-900 dark:text-gray-50'>
         <p>
           Designed and Developed By:{" "}
           <span className='font-semibold'>Sarwar Hossain</span>

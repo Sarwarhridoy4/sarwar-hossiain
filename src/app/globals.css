@@ -1,4 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+/* Smooth scrolling globally */
+html {
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling */
+}
+
+/* Global Scrollbar Styles for WebKit Browsers (Chrome, Safari) */
+html {
+
+    /* Slim scrollbar width */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        /* For horizontal scrollbar */
+    }
+
+    /* Scrollbar track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* Light background for the track */
+        border-radius: 10px;
+    }
+
+    /* Scrollbar handle */
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ff7e5f, #feb47b);
+        /* Gradient handle */
+        border-radius: 10px;
+    }
+
+    /* Hover effect for the handle */
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #ff6a00, #ee0979);
+        /* Darker gradient on hover */
+    }
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;
+    /* Slim scrollbar width */
+    scrollbar-color: #ff7e5f #f1f1f1;
+    /* Color of handle and track */
+}
